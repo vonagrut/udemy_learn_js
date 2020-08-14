@@ -39,7 +39,7 @@ window.addEventListener('DOMContentLoaded', () =>{
 
     //timer
 
-    const deadline = '2020-07-31';
+    const deadline = '2020-08-31';
 
     function getTimeRemaining(endtime){
         const t = Date.parse(endtime) - Date.parse(new Date()),
@@ -259,7 +259,7 @@ window.addEventListener('DOMContentLoaded', () =>{
             .then(data => {
                 console.log(data);
                 customModal(message.success);
-                statusMessage.remove()
+                statusMessage.remove();
             }).catch(() => {
                 customModal(message.failure);
             }).finally(() => {
