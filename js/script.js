@@ -351,5 +351,4 @@ window.addEventListener('DOMContentLoaded', () =>{
     prevButton.addEventListener('click', () => {
         showPreviousSlide();
     });
-    console.log('hello')
 });     
