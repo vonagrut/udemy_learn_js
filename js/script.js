@@ -302,53 +302,49 @@ window.addEventListener('DOMContentLoaded', () =>{
 
     // Slider #1
     const slides = document.querySelectorAll('.offer__slide'),
-          currentId  = document.querySelector('#current'),
           nextButton = document.querySelector('.offer__slider-next'),
-          prevButton = document.querySelector('.offer__slider-prev');
+          prevButton = document.querySelector('.offer__slider-prev'),
+          total = document.querySelector('#total'),
+          currentSlide = document.querySelector('#current');
+    let slideIndex = 1;
 
-    function hideSlides() {
-        slides.forEach(item => {
-            item.classList.add('hide');
-            item.classList.remove('show', 'fade');
-        });
-    };
+    showSlides(slideIndex);
 
-    function showSlide(i = 0) {
-        slides[i].classList.add('show', 'fade');
-        slides[i].classList.remove('hide');
-        currentId.textContent = '0' + (i + 1); 
-    };
+    if (slides.length < 10) {
+        total.textContent = `0${slides.length}`;
+    }else{
+        total.textContent = slides.length;
+    }
 
-    hideSlides();
-    showSlide();
-
-    function showNextSlide(){
-        counter = +currentId.textContent;
-        if (counter == 4){
-            counter = 1;
-        }else{
-            counter = counter + 1;
+    function showSlides(n){
+        if (n > slides.length){
+            slideIndex = 1;
         }
-        hideSlides();
-        showSlide(counter-1);
-    };
 
-
-    function showPreviousSlide(){
-        counter = +currentId.textContent;
-        if (counter == 1){
-            counter = 4;
-        }else{
-            counter = counter - 1;
+        if (n < 1) {
+            slideIndex = slides.length;
         }
-        hideSlides();
-        showSlide(counter-1);
-    };
 
-    nextButton.addEventListener('click', () => {
-        showNextSlide();
-    });
+        slides.forEach(item => item.style.display = 'none');
+        slides[slideIndex - 1].style.display = 'block';
+
+        if (slides.length < 10) {
+            currentSlide.textContent = `0${slideIndex}`;
+        }else{
+            currentSlide.textContent = slideIndex;
+        }
+    }
+
+    function plusSlides (n){
+        showSlides(slideIndex += n);
+    }
+
     prevButton.addEventListener('click', () => {
-        showPreviousSlide();
-    });
-});     
+        plusSlides(-1);
+    }); 
+
+    
+    nextButton.addEventListener('click', () => {
+        plusSlides(1);
+    }); 
+});   
