@@ -369,6 +369,7 @@ window.addEventListener('DOMContentLoaded', () =>{
         } else {
             currentSlide.textContent = slideIndex;
         }
+        
     });
 
     // showSlides(slideIndex);
