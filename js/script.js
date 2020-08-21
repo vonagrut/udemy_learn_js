@@ -371,7 +371,6 @@ window.addEventListener('DOMContentLoaded', () =>{
         }
     });
 
-
     // showSlides(slideIndex);
 
     // if (slides.length < 10) {
