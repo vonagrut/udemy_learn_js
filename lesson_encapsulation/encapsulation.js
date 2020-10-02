@@ -29,3 +29,4 @@ const ivan = new User('Ivan', 27);
 console.log(ivan.age)
 ivan.age = 30
 console.log(ivan.age)
+ivan.say()
