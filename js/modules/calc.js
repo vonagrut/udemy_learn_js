@@ -73,4 +73,4 @@ function calc () {
     getDynamicContent('#age');
 }
 
-module.exports = calc;
+export default calc;
