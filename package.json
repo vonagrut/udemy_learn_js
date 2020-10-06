@@ -1,0 +1,39 @@
+{
+  "name": "udemy_learn_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "@babel/polyfill": "^7.11.5",
+    "es6-promise": "^4.2.8",
+    "jshint": "^2.12.0",
+    "nodelist-foreach-polyfill": "^1.2.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "babel-loader": "^8.1.0",
+    "core-js": "^3.6.5",
+    "json-server": "^0.16.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vonagrut/udemy_learn_js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "browserslist": [
+    "> 1%"
+  ],
+  "bugs": {
+    "url": "https://github.com/vonagrut/udemy_learn_js/issues"
+  },
+  "homepage": "https://github.com/vonagrut/udemy_learn_js#readme"
+}
